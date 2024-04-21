@@ -6,12 +6,12 @@
         var app = builder.Build();
 
         app.UseRouting();
-        app.MapGet("/", About);
+        app.MapGet("/", Start);
 
         app.Run();
     }
 
-    static async Task About(HttpContext context)
+    static async Task Start(HttpContext context)
     {
         HttpResponse response = context.Response;
         await response.WriteAsync("Ok");
